@@ -1,3 +1,18 @@
 {
-    "configurations": []
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "sam:GetTasksFunction",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "serverless-tasks-app/sam/template.yaml",
+                "logicalId": "GetTasksFunction"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
 }
